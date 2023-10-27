@@ -15,6 +15,7 @@ module.exports = {
         secaond: '#2C602A',
         backGround: '#0A0A0A',
         navGray: '#1E1E1E',
+        bgFooter:"#141414"
       },
 
       animation: {

@@ -61,6 +61,7 @@ export default function Courses(): JSX.Element {
                 name={e?.attributes.name}
                 currency={e?.attributes.currency}
                 display_price={e?.attributes.display_price}
+                num_of_reviews={e?.attributes.num_of_reviews}
               />
             ))
           )}

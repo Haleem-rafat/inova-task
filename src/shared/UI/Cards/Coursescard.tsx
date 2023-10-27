@@ -1,7 +1,7 @@
 import { ROUTES } from '@constants/routes';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { generatePath, useNavigate } from 'react-router-dom';
-import { Button } from '..';
+import { Button, ReviewStars } from '..';
 
 interface ICoursescardProps {
   id: string;
@@ -9,6 +9,7 @@ interface ICoursescardProps {
   name: string;
   currency: string;
   display_price: string;
+  num_of_reviews: number;
 }
 
 export default function Coursescard({
@@ -17,6 +18,7 @@ export default function Coursescard({
   name,
   currency,
   display_price,
+  num_of_reviews,
 }: ICoursescardProps): JSX.Element {
   const navigate = useNavigate();
   return (
@@ -29,6 +31,9 @@ export default function Coursescard({
         <div className="absolute bottom-0 w-full p-2 text-white">
           <div>
             <p className="text-2xl font-bold">{name}</p>
+            <div className="w-3">
+              <ReviewStars rating={num_of_reviews} />
+            </div>
             <div className="flex items-center gap-x-5 py-4">
               <p className="text-sm font-thin">{currency} </p>
               <p className=" font-bold">{display_price} </p>

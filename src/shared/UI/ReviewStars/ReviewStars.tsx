@@ -24,13 +24,10 @@ const ReviewStars: React.FC<ReviewStarsProps> = ({ rating, size = 'defult' }) =>
         </div>
         <div
           style={starStyle}
-          className={classNames(
-            'absolute left-0 top-0 h-full w-full overflow-hidden  text-main',
-            {
-              'text-base': size === 'defult',
-              'text-xl': size === 'lg',
-            }
-          )}>
+          className={classNames('absolute left-0 top-0 h-full w-full overflow-hidden  text-main', {
+            'text-base': size === 'defult',
+            'text-xl': size === 'lg',
+          })}>
           <div>★★★★★</div>
         </div>
       </div>
