@@ -1,6 +1,5 @@
 const envConfigKeys = {
   base_url: import.meta.env.VITE_API_BASE,
-  enable_rhf: import.meta.env.VITE_RHF_DEV ? JSON.parse(import.meta.env.VITE_RHF_DEV) : false, // react hook form dev tool
 };
 
 Object.entries(envConfigKeys).forEach(([key, val]) => {
